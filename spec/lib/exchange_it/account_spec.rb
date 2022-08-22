@@ -38,7 +38,7 @@ RSpec.describe ExchangeIt::Account do
     # можно использовать хуки
     before { john.deposit(100) }
 
-    specify "#transfer_with_conversion" do
+    specify '#transfer_with_conversion' do
       # Можно создавать не только объекты-залушки целиком, но и заглушки на отдельные методы для существующих объектов
       allow(john).to receive(:convert).with(sum: 50, from: :usd, to: :eur).and_return(40)
 
